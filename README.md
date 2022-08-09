@@ -5,3 +5,5 @@ Random hobbiból csináltam ezt, lehet nem fogom tovább fejleszteni.
 Megosztottam veletek, hogy ti is tudjátok használni.
 
 Éppenséggel lusta vagyok leírni a használatát, szóval hagyjál békén vele.
+
+(english translation soon... sry about that '')
