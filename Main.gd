@@ -12,7 +12,6 @@ func _ready():
 	datas = json.result
 	print(datas)
 	$Text.text = "Please Choose server..."
-	#_requestdata("ngrokip","")
 
 var data
 var ip
@@ -133,33 +132,34 @@ func _Animation(delta):
 	$Logo.scale.y = lerp($Logo.scale.y, 1,10 * delta)
 	$Logo.rotation_degrees = lerp($Logo.rotation_degrees, 0,10 * delta)
 	timer += 1.8 * delta
-	if timer > 1 and tog == 0:
+	var limit = 0.75
+	if timer > limit and tog == 0:
 		tog = 1
 		timer = 0
 		$Logo.position += Vector2(rand_range(-5,5),rand_range(-5,5))
-		$Logo.scale.x += 0.01
-		$Logo.scale.y -= 0.005
+		$Logo.scale.x += 0.1
+		$Logo.scale.y -= 0.05
 		$Logo.rotation_degrees += 2
-	elif timer > 1 and tog == 1:
+	elif timer > limit and tog == 1:
 		tog = 2
 		timer = 0
 		$Logo.position += Vector2(rand_range(-5,5),rand_range(-5,5))
-		$Logo.scale.x -= 0.005
-		$Logo.scale.y += 0.01
+		$Logo.scale.x -= 0.05
+		$Logo.scale.y += 0.1
 		$Logo.rotation_degrees -= 2
-	elif timer > 1 and tog == 2:
+	elif timer > limit and tog == 2:
 		tog = 3
 		timer = 0
 		$Logo.position += Vector2(rand_range(-5,5),rand_range(-5,5))
-		$Logo.scale.x += 0.01
-		$Logo.scale.y -= 0.005
+		$Logo.scale.x += 0.1
+		$Logo.scale.y -= 0.05
 		$Logo.rotation_degrees -= 2
-	elif timer > 1 and tog == 3:
+	elif timer > limit and tog == 3:
 		tog = 0
 		timer = 0
 		$Logo.position += Vector2(rand_range(-5,5),rand_range(-5,5))
-		$Logo.scale.x -= 0.005
-		$Logo.scale.y += 0.01
+		$Logo.scale.x -= 0.05
+		$Logo.scale.y += 0.1
 		$Logo.rotation_degrees += 2
 
 
